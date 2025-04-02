@@ -1,7 +1,0 @@
-streamlit
-pandas
-matplotlib
-prophet
-groq
-python-dotenv
-openpyxl
