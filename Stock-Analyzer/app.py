@@ -5,9 +5,11 @@ import plotly.express as px
 import plotly.graph_objects as go
 import os
 from groq import Groq
+from dotenv import load_dotenv
 
 
 # Load API key securely
+load_dotenv()
 os.environ['GROQ_API_KEY'] = st.secrets['GROQ_API_KEY']
 
 if not GROQ_API_KEY:
