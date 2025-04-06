@@ -1,0 +1,3 @@
+name: Github Action
+Env:
+GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
