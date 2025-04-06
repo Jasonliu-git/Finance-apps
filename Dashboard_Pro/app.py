@@ -225,7 +225,7 @@ st.subheader("🤖 AI-Powered Insights")
 # AI Summary of Data
 load_dotenv()
 GROQ_API_KEY = st.secrets['GROQ_API_KEY']
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = Groq(api_key=GROQ_API_KEY)
 
 response = client.chat.completions.create(
     messages=[
