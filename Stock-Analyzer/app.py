@@ -66,7 +66,7 @@ if st.button("🚀 Get Stock Data"):
         st.subheader("🤖 AI-Powered Company & Industry Insights")
 
         client = Groq(api_key=GROQ_API_KEY)
-        os.environ['GROQ_API_KEY'] = st.secrets['CROQ_API_KEY']
+        os.environ['GROQ_API_KEY'] = st.secrets['GROQ_API_KEY']
         response = client.chat.completions.create(
             messages=[
                 {"role": "system", "content": "You are an AI financial analyst providing stock market insights based on company data."},
