@@ -4,5 +4,6 @@ yfinance
 matplotlib
 seaborn
 groq
+python-dotenv
 plotly
 dash
