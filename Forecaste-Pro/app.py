@@ -17,7 +17,7 @@ from groq import Groq
 
 # Load environment variables (for GROQ API Key)
 load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = st.secrets['GROQ_API_KEY']
 
 # Streamlit config
 st.set_page_config(page_title="Multi-Model Financial Forecaster", layout="wide")
