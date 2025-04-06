@@ -8,8 +8,7 @@ from groq import Groq
 from dotenv import load_dotenv
 
 # Load API key securely
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+groq_api_key = st.secrets["GROQ_API_KEY"]
 
 if not GROQ_API_KEY:
     st.error("🚨 API Key is missing! Set it in Streamlit Secrets or a .env file.")
@@ -66,8 +65,7 @@ if st.button("🚀 Get Stock Data"):
         st.subheader("🤖 AI-Powered Company & Industry Insights")
 
         client = Groq(api_key=GROQ_API_KEY)
-        os.environ['GROQ_API_KEY'] = st.secrets['GROQ_API_KEY']
-        response = client.chat.completions.create(
+                response = client.chat.completions.create(
             messages=[
                 {"role": "system", "content": "You are an AI financial analyst providing stock market insights based on company data."},
                 {"role": "user", "content": f"Here is the stock market data for {company_name}:\n"
