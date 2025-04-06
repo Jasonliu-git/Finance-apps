@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+streamlit
+prophet
+groq
+python-dotenv
+openpyxl
+scipy 
+pmdarima

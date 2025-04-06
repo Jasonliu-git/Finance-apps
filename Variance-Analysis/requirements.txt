@@ -1,0 +1,8 @@
+streamlit
+pandas
+matplotlib
+seaborn
+prophet
+groq
+python-dotenv
+openpyxl
