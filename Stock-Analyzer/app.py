@@ -8,8 +8,7 @@ from groq import Groq
 from dotenv import load_dotenv
 
 # Load API key securely
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = os.environ("GROQ_API_KEY")
 
 if not GROQ_API_KEY:
     st.error("🚨 API Key is missing! Set it in Streamlit Secrets or a .env file.")
