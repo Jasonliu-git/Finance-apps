@@ -1,9 +1,22 @@
 import streamlit as st
 import pandas as pd
+import os
+from groq import Groq
+from dotenv import load_dotenv
 import plotly.graph_objects as go
 import plotly.io as pio
 import base64
 import io
+
+# Load API key securely
+load_dotenv()
+GROQ_API_KEY = st.secrets['GROQ_API_KEY']
+
+if not GROQ_API_KEY:
+    st.error("🚨 API Key is missing! Set it in Streamlit Secrets or a .env file.")
+    st.stop()
+
+client = Groq(api_key=GROQ_API_KEY)
 
 # Ensure Kaleido is recognized for PNG export
 pio.kaleido.scope.default_format = "png"
